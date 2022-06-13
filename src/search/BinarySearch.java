@@ -1,5 +1,7 @@
 package search;
 
+import java.util.Arrays;
+
 /**
  * Author: Sergey.
  */
@@ -7,25 +9,29 @@ public class BinarySearch {
 
     /**
      * Count iterations not more than log_2(N)
+     * 1. Find borders
+     * 2. Using while to iterate before we find the most close position of num or needed positions num
+     * 3. find mid position by separate 2
+     * 4. if mid num equals finding num return position
+     * 5. if guess num < mid then mid is to be high position or vice versa
      *
      * @param searchedNum
      * @param array
      * @return position of search number in array
      */
     public static int searchNumber(int searchedNum, int[] array) {
-        int low = 0;
-        int high = array.length - 1;
-        int mid;
-        while (low <= high) {
-            mid = (low + high);
-            int guess = array[mid];
-            if (guess == searchedNum) {
+        int lowBorder = 0;
+        int highBorder = array.length - 1;
+        while (lowBorder <= highBorder) {
+            int mid = (lowBorder + highBorder) / 2;
+            int guessNum = array[mid];
+            if (searchedNum == guessNum) {
                 return mid;
             }
-            if (guess > searchedNum) {
-                high = mid - 1;
+            if (searchedNum < guessNum) {
+                highBorder = mid - 1;
             } else {
-                low = mid + 1;
+                lowBorder = mid + 1;
             }
         }
         return -1;
