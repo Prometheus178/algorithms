@@ -1,7 +1,5 @@
 package search;
 
-import java.util.Arrays;
-
 /**
  * Author: Sergey.
  */
