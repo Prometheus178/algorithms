@@ -5,6 +5,13 @@ package recursion;
  */
 public class Recursion {
 
+    public static int sum(int value) {
+        if (value == 1) {
+            return 1;
+        }
+        return 1 + sum(value - 1);
+    }
+
     public static int sum(int[] array) {
         int value;
         if (array.length == 0) {

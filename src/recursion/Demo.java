@@ -6,8 +6,8 @@ package recursion;
 public class Demo {
 
     public static void main(String[] args) {
-        StackCall.greet("Sergey");
-
+        System.out.println(Recursion.sum(3));
+//        StackCall.greet("Sergey");
 //        countSum();
     }
 
