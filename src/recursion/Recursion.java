@@ -1,5 +1,7 @@
 package recursion;
 
+import java.util.List;
+
 /**
  * Author: Sergey.
  */
@@ -22,7 +24,7 @@ public class Recursion {
         return value + sum(ints);
     }
 
-    public static int[] removeElement(int[] array) {
+    private static int[] removeElement(int[] array) {
         if (array.length == 0) {
             return array;
         }
