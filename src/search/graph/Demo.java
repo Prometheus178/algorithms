@@ -1,5 +1,6 @@
 package search.graph;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 /**
@@ -18,8 +19,10 @@ public class Demo {
         graph.put("jonny", new String[]{"thom"});
         graph.put("thom", new String[]{});
 
-        boolean nameEndedAtM = BreadthFirstSearch.findNameEndedAtM(graph);
-        System.out.println(nameEndedAtM);
+//        boolean nameEndedAtM = BreadthFirstSearch.findNameEndedAtM(graph);
+//        System.out.println(nameEndedAtM);
+        ArrayList<String> checked = new ArrayList<>();
+        DeepFirstSearch.dfs(checked, graph, "you");
 
     }
 }
