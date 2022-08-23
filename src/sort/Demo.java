@@ -12,12 +12,13 @@ public class Demo {
         int[] array = new int[10];
         int count = 0;
         while (count < 10) {
-            array[count] = random.nextInt();
+            array[count] = random.nextInt(10);
             count++;
         }
 
         System.out.println(Arrays.toString(array));
-        array = SelectionSort.sort(array);
+//        array = SelectionSort.sort(array);
+        MergeSort.sort(array);
         System.out.println(Arrays.toString(array));
     }
 }
